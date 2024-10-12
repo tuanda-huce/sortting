@@ -4,7 +4,8 @@ import java.io.*;
 class GFG {
     
     // An optimized version of Bubble Sort
-    static void bubbleSort(int arr[], int n){
+    static void bubbleSort(int arr[]){
+        int n = arr.length;
         int i, j, temp;
         boolean swapped;
         for (i = 0; i < n - 1; i++) {
@@ -27,10 +28,11 @@ class GFG {
         }
     }
 
+
     // Function to print an array
-    static void printArray(int arr[], int size){
+    static void printArray(int arr[]){
         int i;
-        for (i = 0; i < size; i++)
+        for (i = 0; i < arr.length; i++)
             System.out.print(arr[i] + " ");
         System.out.println();
     }
@@ -38,9 +40,8 @@ class GFG {
     // Driver program
     public static void main(String args[]){
         int arr[] = { 64, 34, 25, 12, 22, 11, 90 };
-        int n = arr.length;
-        bubbleSort(arr, n);
+        bubbleSort(arr);
         System.out.println("Sorted array: ");
-        printArray(arr, n);
+        printArray(arr);
     }
 }
